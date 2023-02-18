@@ -25,7 +25,7 @@ const todoList = () => {
       // of todo items that are due today accordingly.
       all.forEach(element => {
         if(element.dueDate===today && element.completed==false){
-          duedatearry.push('[ ]'+" "+element.title+'\n');
+          duedatearry.push('[ ]'+" "+element.title);
         }
         else if(element.dueDate===today && element.completed===true){
           duedatearry.push('[x]'+' '+element.title);
@@ -104,8 +104,7 @@ return list;
   formattedItemsDueToday.forEach(element=>{
     console.log(element)
   })
- // console.log(''+formattedItemsDueToday)
-  console.log("\n")
+  console.log('\n')
   
   console.log("Due Later")
   let itemsDueLater = todos.dueLater()
@@ -113,5 +112,3 @@ return list;
   formattedItemsDueLater.forEach(element=>{
     console.log(element);
   })
-  
-  console.log("\n\n")
